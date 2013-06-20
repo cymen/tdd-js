@@ -59,6 +59,12 @@ describe('math conversions', function() {
 
     it('sees a non-numeric string as not a number', function() {
       expect(isNaN('abc')).toBeTruthy();
+      expect(isNaN('abc')).toBe(true);
+    });
+
+    it("equality", function() {
+      expect(2).toBe(2.0);
+      expect('2' == 2).toBeTruthy();
     });
 
     it('sees a partially numeric string as not a number', function() {
